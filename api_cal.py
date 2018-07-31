@@ -10,7 +10,7 @@ import time
 starttime=time.asctime(time.localtime(time.time()))   
 starttime1=time.time();
 def getjson(ocoo):
-    url='http://api.map.baidu.com/direction/v2/transit?origin='+ocoo+'&destination=31.1431889586,121.6581503809&coord_type=wgs84&tactics_incity=4&ak=d7vs3eaHfM0io4aV98VQf7kv1v5VmX3N'
+    url='http://api.map.baidu.com/direction/v2/transit?origin='+ocoo+'&destination=31.1431889586,121.6581503809&coord_type=wgs84&tactics_incity=4&ak=yourak'
     while True:
         try:
             response=requests.get(url=url,timeout=5)
@@ -27,8 +27,8 @@ def getjson(ocoo):
     html=response.text
     decodejson=json.loads(html)
     return decodejson
-file_object=open(r'C:\Users\XIECHEN\Desktop\test1.txt','r')
-file_object2=open(r'C:\Users\XIECHEN\Desktop\output.txt','w')
+file_object=open(r'C:\Users\yourPCname\Desktop\test1.txt','r')
+file_object2=open(r'C:\Users\yourPCname\Desktop\output.txt','w')
 count=0
 try:
     for line in file_object:
